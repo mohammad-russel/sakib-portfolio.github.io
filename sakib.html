@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakib Al Hasan</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        /* Initial styles for transparent header */
+        #header.transparent {
+            background-color: transparent;
+        }
+
+        /* Styles for header when scrolled */
+        /* Styles for header when scrolled */
+        #header.scrolled {
+            background-color: #00a597;
+            /* Change this to your preferred minimal color */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-right: 20px;
+        }
+
+        .bg-gradient-to-b {
+            background: linear-gradient(to bottom, rgb(65, 230, 175), rgb(0, 177, 168));
+
+        }
+
+        @media screen and (max-width:768px) {
+            .menu {
+                position: absolute;
+                background: #072521;
+                width: 100%;
+                top: 0;
+                left: 0;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 30px;
+                padding-top: 40px;
+            }
+
+            .menu li {
+                margin-right: 0;
+                margin-bottom: 20px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .dp {
+                margin-bottom: 50px;
+                text-align: center;
+            }
+
+            .infos {
+                text-align: center;
+                width: 100%;
+            }
+
+            .infos h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero-box {
+                flex-direction: column-reverse;
+            }
+
+            #social-media-icons i {
+                font-size: 1.5rem;
+                padding: 0px 10px;
+            }
+
+            .open-nav {
+                display: block;
+
+            }
+
+            #menu-toggle {
+                z-index: 1;
+
+                position: absolute;
+                top: 20px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-white">Sakib</h1>
+            <!-- Mobile Menu Toggle Icon -->
+            <div id="menu-toggle" class="block md:hidden">
+                <button id="open-icon" class="text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 open-icon" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <button id="close-icon" class=" hidden text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Navigation Links -->
+            <nav id="menu" class="hidden md:block">
+                <ul class="menu">
+                    <li><a href="#home" class="text-white hover:text-gray-300">Home</a></li>
+                    <li><a href="#about" class="text-white hover:text-gray-300">About</a></li>
+
+                    <li><a href="#skills" class="text-white hover:text-gray-300">Skills</a></li>
+                    <li><a href="#services" class="text-white hover:text-gray-300">Services</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- hero section  -->
+    <section id="home" class="py-32 px-4 bg-gradient-to-r from-green-600 to-blue-500">
+        <div class="hero-box container mx-auto flex items-center justify-between h-900">
+            <div class="w-1/2 infos">
+                <h2 class="text-5xl font-bold text-white mb-4">Sakib Al Hasan</h2>
+                <h3 class="text-2xl text-white mb-4">Digital Marketer</h3>
+                <p class="text-white">I'm Sakib Al Hasan. I have skills on Social media marketing (mostly Facebook
+                    marketing). I have skills in PowerPoint and I'm good at Sales.</p>
+            </div>
+            <div class="dp w-1/2 flex flex-col items-center justify-center">
+                <!-- Image -->
+                <img src="https://i.ibb.co/gZgPKQ2/IMG-20240416-WA0001-3-Shakib-Al-Hasan.jpg" alt="Sakib image"
+                    class="rounded-full h-48 w-48 object-cover object-center mb-4">
+
+                <!-- Social Media Icons -->
+                <div id="social-media-icons" class="flex items-center">
+                    <a href="https://www.facebook.com/shakibmcmissile?mibextid=ZbWKwL"
+                        class="text-white mr-4 hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/shakibmcmissile?igsh=dDV6OGR1aHg4czNu"
+                        class="text-white mr-4 hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                    <!-- <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-linkedin-in"></i></a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section  -->
+    <section id="about" class="container mx-auto px-4 py-16 md:py-20">
+        <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+        <div class="flex flex-col md:flex-row md:space-x-10">
+            <img class="w-full md:w-1/2 rounded-lg object-cover mb-4 md:mb-0"
+                src="https://i.ibb.co/N9pZr6y/PXL-20240411-032107785-2-Shakib-Al-Hasan.jpg"
+                alt="Your Name - Profile Picture">
+            <div class="flex-grow prose text-gray-700">
+                <p>I'm Sakib Al Hasan, specializing in social media marketing, particularly Facebook. Skilled in
+                    crafting engaging content and targeted ad campaigns, I drive brand visibility and lead generation.
+                    Proficient in PowerPoint, I create impactful presentations for diverse purposes. Additionally, I
+                    excel in sales, adept at identifying opportunities and closing deals. With a strategic approach and
+                    dedication to results, I'm poised to contribute to any team or organization aiming to enhance their
+                    online presence and drive revenue.</p>
+                <a href="#contact"
+                    class="inline-flex items-center px-4 py-2 mt-4 text-white bg-blue-500 rounded-md hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Let's
+                    Connect!</a>
+            </div>
+        </div>
+    </section>
+    <!-- Skill Section -->
+    <section id="skills" class="py-20 px-4 bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500">
+        <div class="container mx-auto">
+            <!-- Title -->
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Skills</h2>
+
+            <!-- Skill Boxes -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Skill Box - Social Media Marketing -->
+                <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
+                    <i class="fas fa-globe-americas text-4xl text-blue-500 mb-2"></i>
+                    <span class="text-gray-800 font-semibold">Social Media Marketing</span>
+                </div>
+
+                <!-- Skill Box - PowerPoint -->
+                <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
+                    <i class="fas fa-file-powerpoint text-4xl text-red-500 mb-2"></i>
+                    <span class="text-gray-800 font-semibold">PowerPoint</span>
+                </div>
+
+                <!-- Skill Box - Sales -->
+                <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
+                    <i class="fas fa-handshake text-4xl text-green-500 mb-2"></i>
+                    <span class="text-gray-800 font-semibold">Sales</span>
+                </div>
+
+                <!-- Add more skills here -->
+                <!-- Skill Box - Data Analysis -->
+                <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
+                    <i class="fas fa-chart-bar text-4xl text-purple-500 mb-2"></i>
+                    <span class="text-gray-800 font-semibold">Data Analysis</span>
+                </div>
+
+                <!-- Skill Box - Content Creation -->
+                <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
+                    <i class="fas fa-pen text-4xl text-orange-500 mb-2"></i>
+                    <span class="text-gray-800 font-semibold">Content Creation</span>
+                </div>
+
+                <!-- Skill Box - Customer Relationship Management -->
+                <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
+                    <i class="fas fa-users text-4xl text-blue-500 mb-2"></i>
+                    <span class="text-gray-800 font-semibold">CRM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 bg-gray-100">
+        <div class="container mx-auto">
+            <!-- Title -->
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Services</h2>
+
+            <!-- Service Cards -->
+            <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 - Social Media Marketing -->
+                <li class="bg-white p-6 rounded-lg shadow-md relative flex">
+                    <i class="fas fa-globe-americas text-3xl text-blue-500 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Social Media Marketing</h3>
+                        <p class="text-gray-600">Strategically enhance brand presence and engagement across social
+                            platforms.</p>
+                    </div>
+                </li>
+
+                <!-- Service 2 - Content Creation and Curation -->
+                <li class="bg-white p-6 rounded-lg shadow-md relative flex">
+                    <i class="fas fa-pen text-3xl text-blue-500 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Content Creation and Curation</h3>
+                        <p class="text-gray-600">Craft compelling content tailored to target audiences for maximum
+                            impact.</p>
+                    </div>
+                </li>
+
+                <!-- Service 3 - Digital Advertising Campaigns -->
+                <li class="bg-white p-6 rounded-lg shadow-md relative flex">
+                    <i class="fas fa-bullhorn text-3xl text-blue-500 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Digital Advertising Campaigns</h3>
+                        <p class="text-gray-600">Create and manage targeted ad campaigns to drive conversions and ROI.
+                        </p>
+                    </div>
+                </li>
+
+                <!-- Service 6 - Search Engine Optimization (SEO) -->
+                <li class="bg-white p-6 rounded-lg shadow-md relative flex">
+                    <i class="fas fa-search text-3xl text-blue-500 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Search Engine Optimization (SEO)</h3>
+                        <p class="text-gray-600">Optimize website content and structure to improve search engine
+                            rankings.</p>
+                    </div>
+                </li>
+
+                <!-- Add more services here -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <div class="container mx-auto">
+            &copy; 2024 Sakib Al Hasan. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+
+<script>
+    // Add scroll event listener
+    window.addEventListener('scroll', function () {
+        // Get the header element
+        var header = document.getElementById('header');
+        // Check if the page has been scrolled
+        if (window.scrollY > 0) {
+            // If scrolled, add class to change background color
+            header.classList.add('scrolled');
+            header.classList.remove('transparent');
+        } else {
+            // If not scrolled, remove class to restore initial background color
+            header.classList.remove('scrolled');
+            header.classList.add('transparent');
+        }
+    });
+
+    $(document).ready(function () {
+        $("#menu").removeClass("open-nav")
+        $("#open-icon").click(function () {
+            $(this).hide()
+            $("#close-icon").show()
+            $("#menu").addClass("open-nav")
+
+        })
+        $("#close-icon").click(function () {
+            $(this).hide()
+            $("#open-icon").show()
+            $("#menu").removeClass("open-nav")
+
+        })
+    })
+
+</script>
+
+</html>
